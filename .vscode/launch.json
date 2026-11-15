@@ -13,8 +13,17 @@
         "src.app:app",
         "--reload",
         "--reload-include",
-        "src/static/*"
+        "src/static/*",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8000"
       ],
+      "serverReadyAction": {
+        "pattern": "Uvicorn running on http://\\S+",
+        "uriFormat": "http://localhost:8000",
+        "action": "openExternally"
+      },
       "jinja": true
     }
   ]
